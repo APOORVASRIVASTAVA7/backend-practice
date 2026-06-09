@@ -1,11 +1,11 @@
-const express = require('express');
-const multer = require('multer');
+const express = require('express'); 
+const multer = require('multer'); //file middleware
 const uploadFile = require("./services/storage.services")
 const postModel = require("./models/post.models")
-const cors = require("cors")
-const app = express();
-app.use(cors())
-app.use(express.json());
+const cors = require("cors") //frontend and backend connectivity
+const app = express(); 
+app.use(cors())   
+app.use(express.json());  //middleware
 
 
 const upload = multer({ storage: multer.memoryStorage() })
